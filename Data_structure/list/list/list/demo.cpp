@@ -41,13 +41,42 @@ int main()
 	list1->ListInsert(3, &e4);
 	list1->ListInsert(4, &e5);
 	list1->ListInsert(5, &e6);
-	list1->ListInsert(3, &e7);
-
-	list1->ListDelete(0, &temp);
-	
+	list1->ListInsert(6, &e7);
 
 	list1->ListTraverse();
-	cout << "#" << temp << endl;
+
+	/*list1->GetElem(0, &temp);
+	cout << "temp: " << temp << endl;
+
+	temp = 5;
+	cout << "tempµØÖ·£º " << list1->LocateElem(&temp) << endl;
+*/
+	list1->PriorElem(&e2, &temp);
+	cout << "temp: " << temp << endl;
+	list1->NextElem(&e6, &temp);
+	cout << "temp: " << temp << endl;
+
+
+
+
+	/*list1->ListDelete(0, &temp);
+
+	if (!list1->ListEmpty())
+	{
+		cout << "not empty" << endl;
+	}
+	
+	list1->ClearList();
+
+	if (list1->ListEmpty())
+	{
+		cout << "empty" << endl;
+	}
+
+	list1->ListTraverse();*/
+
+	/*cout << "#" << temp << endl;
+	cout << list1->ListLength() << endl;*/
 
 	delete list1;
 	list1 = NULL;
